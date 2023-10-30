@@ -23,6 +23,10 @@ public class FactorialTest {
         int fact=1;
         while(num>=1){
 
+
+
+
+
             fact = num *fact;
             System.out.println("num:"+num);
             num--;
