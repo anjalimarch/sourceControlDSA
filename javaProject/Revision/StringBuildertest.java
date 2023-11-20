@@ -14,9 +14,9 @@ public class StringBuildertest {
 
         sb.insert(0, 'M');
         System.out.println(sb);
-        sb.delete(1,3);
+         sb.delete(1,3);
         System.out.println(sb);
-        sb.append('T');
+         sb.append('T');
         System.out.println(sb);
     }
 

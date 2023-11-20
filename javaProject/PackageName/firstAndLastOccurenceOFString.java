@@ -7,7 +7,7 @@ public class firstAndLastOccurenceOFString {
 
     public static void main(String args []){
 
-        String s= "anjalimishra";
+        String s= "njalimishra";
         occurenceCheck(s,0,s.length()-1, 1);
 
 
