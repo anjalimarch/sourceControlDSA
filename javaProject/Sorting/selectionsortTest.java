@@ -6,11 +6,11 @@ public class selectionsortTest {
 
     public static void main(String args[]) {
         int[] a = {5, 4, 6, 7, 2, 1};
-        insertionSort(a);
+        seletionSort(a);
 
     }
 
-    public static void insertionSort(int[] a) {
+    public static void seletionSort(int[] a) {
 
         int min;
         int im;

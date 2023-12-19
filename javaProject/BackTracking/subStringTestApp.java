@@ -28,6 +28,7 @@ public class subStringTestApp {
         }
 
 
+
         for (int i = fi; i < a.length; i++) {
             char temp = a[i];
             a[i] = a[fi];
