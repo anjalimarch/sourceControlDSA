@@ -22,7 +22,6 @@ public class SieveTheorem {
 
         for(int k=2;k<=n;k++){
 
-
             b[k]= true;
         }
 
@@ -45,7 +44,8 @@ public class SieveTheorem {
                 System.out.println("prime number :"+a+" "+b[a]);
 
 
-            }}
+            }
+        }
 
 
     }
