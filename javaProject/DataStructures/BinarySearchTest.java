@@ -8,7 +8,7 @@ public class BinarySearchTest {
 
 
         int [] a= {2,8,14,32,66,100,104,200,400};// not sorted
-        int x= 200;
+        int x= 66;
         binarySearch( a,  x,0, a.length-1);
 
     }
