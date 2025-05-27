@@ -13,10 +13,10 @@ public class PCeilFloorTest {
 
     public static int floorProblem(int [] a){
 
-
+return -1 ;
     }
     public  static int ceilProblem(int [] a){
 
-
+return -1;
     }
 }
