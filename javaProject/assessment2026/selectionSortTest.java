@@ -25,10 +25,13 @@ public class selectionSortTest {
 
                              indexOfmin = j;
                          }
-                         temp = a[i];
-                         a[i]= a[indexOfmin];
-                         a[indexOfmin]= temp;
+
                      }
+
+           temp = a[i];
+           a[i]= a[indexOfmin];
+           a[indexOfmin]= temp;
+
        }
 
         return a;
