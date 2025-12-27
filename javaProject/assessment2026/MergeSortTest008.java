@@ -6,17 +6,26 @@ public class MergeSortTest008 {
         int [] a = {44,11,8,7,45,76,45,54};
 
         mergeSort(a,  0, a.length-1);
-
+       printArray(a);
     }
 
     public static void mergeSort(int [] a, int low, int high){
-        if (low<= high ){
+        if (low>= high ){
+            for (int val:a
+            ) {
+                //      System.out.println(val);
 
-            int mid = (low +high)/2;
-            mergeSort(a,  low, mid);
-            mergeSort(a,mid+1, high);
-            merge (a, mid, low, high);
+            }
+
+            return;
+
+
         }
+
+        int mid = (low +high)/2;
+        mergeSort(a,  low, mid);
+        mergeSort(a,mid+1, high);
+        merge (a, mid, low, high);
 
 
 
@@ -61,6 +70,12 @@ public class MergeSortTest008 {
             k++;
             j++;
 
+        }
+
+        for(int s = low; s<=high ; s++){
+
+
+            a[s]= b[s];
         }
 
 
