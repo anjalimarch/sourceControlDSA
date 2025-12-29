@@ -2,6 +2,7 @@ package assessment2026;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 public class HashMapTest012 {
 
@@ -35,6 +36,17 @@ public class HashMapTest012 {
         }
         System.out.println(rollNum);
 
+        Set<Integer> keys= rollNum.keySet();
+        for (int val : keys){
+
+            System.out.println("values of key in hashmap"+val);
+
+        }
+
+        System.out.println("values in hashmap"+ rollNum.values());
+
+
+
         //iterate
 
         for(Map.Entry<Integer, String > e :rollNum.entrySet()){
@@ -47,5 +59,10 @@ public class HashMapTest012 {
 
 
         }
+
+
+
+        rollNum.remove(1, "Mishra");
+        System.out.println("after removal"+rollNum);
     }
 }
