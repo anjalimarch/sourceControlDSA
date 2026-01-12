@@ -101,9 +101,12 @@ public class ImplementationLL014 {
             return;
 
 
+         } else if (idx==0) {
+             insertAtBeggining(val);
+             return;
          }
 
-      for(int i=1; i<=idx-1;i++) {
+          for(int i=1; i<=idx-1;i++) {
 
           temp = temp.next;
 
@@ -111,6 +114,19 @@ public class ImplementationLL014 {
          t.next=temp.next;
          temp.next=t;
 
+      }
+
+      int getAT(int idx){
+
+
+
+          Node temp=head;
+
+         for(int i=1; i<=idx; i++) {
+             temp = temp.next;
+         }
+
+      return temp.data;
       }
 
 
@@ -125,9 +141,13 @@ public class ImplementationLL014 {
         ll.insertAtBeggining(7);
         ll.insertAT(2,14);
         ll.insertAT(3,15);
+
+      //  int sizeOfLL= ll.size();
+      // System.out.println(sizeOfLL);
         ll.display();
-        int sizeOfLL= ll.size();
-        System.out.println(sizeOfLL);
+
+       int valueOfNode=  ll.getAT(3);
+        System.out.println("Value of Node -- "+"  "+valueOfNode);
 
 
     }
