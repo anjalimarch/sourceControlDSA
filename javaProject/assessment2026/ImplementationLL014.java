@@ -47,6 +47,24 @@ public class ImplementationLL014 {
 
       }
 
+      void insertAtBeggining(int val){
+
+          Node temp = new Node(val);
+
+          if(head==null){
+
+              head= tail = temp;
+
+          }else{
+
+
+              temp.next=head;
+              head = temp;
+          }
+
+
+      }
+
       void display(){
           Node temp = head;
 
@@ -75,6 +93,20 @@ public class ImplementationLL014 {
 
       }
 
+      void insertAT(int idx, int val){
+         Node t = new Node (val);
+         Node temp = head;
+
+      for(int i=1; i<=idx-1;i++) {
+
+          temp = temp.next;
+
+      }
+         t.next=temp.next;
+         temp.next=t;
+
+      }
+
 
    }
     public static void main(String args []){
@@ -82,8 +114,12 @@ public class ImplementationLL014 {
         LinkedList ll = new LinkedList();
         ll.insertAtEnd(4);
         ll.insertAtEnd(5);
-        ll.display();
 
+        ll.insertAtBeggining(6);
+        ll.insertAtBeggining(7);
+        ll.insertAT(2,14);
+        ll.insertAT(3,15);
+        ll.display();
         int sizeOfLL= ll.size();
         System.out.println(sizeOfLL);
 
