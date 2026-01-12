@@ -96,6 +96,12 @@ public class ImplementationLL014 {
       void insertAT(int idx, int val){
          Node t = new Node (val);
          Node temp = head;
+         if(idx==size()){
+            insertAtEnd(val);
+            return;
+
+
+         }
 
       for(int i=1; i<=idx-1;i++) {
 
