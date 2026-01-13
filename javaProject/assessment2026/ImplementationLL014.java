@@ -23,8 +23,9 @@ public class ImplementationLL014 {
 
       Node head = null;
       Node tail =null;
+      int size =0;
 
-      void insertAtEnd(int val){
+      void insertAtEnd( int val){
 
           Node temp = new Node(val);
 
@@ -43,6 +44,7 @@ public class ImplementationLL014 {
           }
 
           tail = temp;
+          size++;
 
 
       }
@@ -62,7 +64,7 @@ public class ImplementationLL014 {
               head = temp;
           }
 
-
+        size++;
       }
 
       void display(){
@@ -109,6 +111,7 @@ public class ImplementationLL014 {
           for(int i=1; i<=idx-1;i++) {
 
           temp = temp.next;
+          size++;
 
       }
          t.next=temp.next;
@@ -130,7 +133,22 @@ public class ImplementationLL014 {
       }
 
 
+    void   deleteAtIndexMethod(int idx ){
+
+          Node temp = head;
+
+           for(int i=1; i<=idx-1; i++){
+
+               temp = temp.next;
+
+           }
+        temp.next = temp.next.next;
+        size--;
+      }
+
+
    }
+
     public static void main(String args []){
 
         LinkedList ll = new LinkedList();
@@ -144,10 +162,12 @@ public class ImplementationLL014 {
 
       //  int sizeOfLL= ll.size();
       // System.out.println(sizeOfLL);
-        ll.display();
 
+        ll.deleteAtIndexMethod(2);
+        ll.display();
        int valueOfNode=  ll.getAT(3);
         System.out.println("Value of Node -- "+"  "+valueOfNode);
+
 
 
     }
