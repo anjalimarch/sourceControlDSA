@@ -23,10 +23,10 @@ public class TestStrings015 {
         System.out.println(idx);
         String atr = "Hello";
         String gtr= "Dello";
-
         System.out.println(atr.compareTo(gtr));
         String name= "Anjali Mishra";
         System.out.println(name.contains("Mis"));
+        System.out.println(name.startsWith("Anj"));
 
 
 
