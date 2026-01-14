@@ -137,12 +137,21 @@ public class ImplementationLL014 {
 
           Node temp = head;
 
+          if(idx ==0){
+
+              head = head.next;
+              size--;
+              return;
+
+          }
+
            for(int i=1; i<=idx-1; i++){
 
                temp = temp.next;
 
            }
         temp.next = temp.next.next;
+           tail= temp;
         size--;
       }
 
