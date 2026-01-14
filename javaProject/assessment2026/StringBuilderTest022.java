@@ -18,8 +18,14 @@ public class StringBuilderTest022 {
          System.out.println(sb);
 
          sb.delete(2,4);
-        // sb.reverse();
+
          System.out.println(sb);
+         sb.reverse();
+         System.out.println(sb);
+         String newString= sb.substring(3);
+         System.out.println(newString);
+         System.out.println(sb);
+
 
     }
 
