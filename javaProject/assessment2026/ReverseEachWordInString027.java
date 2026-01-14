@@ -34,9 +34,9 @@ public class ReverseEachWordInString027 {
 
            }
         System.out.println(sb);
-           sb.append(" ");
+
            sb.reverse();
-           ans+=sb;
+           ans+=sb; // ans = ans+sb
 
       System.out.println(ans);
 
