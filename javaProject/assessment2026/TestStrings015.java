@@ -28,6 +28,7 @@ public class TestStrings015 {
         System.out.println(name.contains("Mis"));
         System.out.println(name.startsWith("Anj"));
         System.out.println(name.endsWith("ra"));
+        System.out.println(name.toLowerCase());
 
 
 
