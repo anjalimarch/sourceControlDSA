@@ -4,6 +4,11 @@ public class ToggleStringTest024 {
 
     // upper to lower and lower to upper
 
+    // toggle all the characters  of the string i.e. to convert Upper case to lower case and vice verso.
+
+    //i/p = Physics
+    // o/p = pHYSICS
+
     public static void main (String args []){
 
 
@@ -46,6 +51,7 @@ public class ToggleStringTest024 {
           }
 
       }
+      System.out.println(str);
 
 
     }
