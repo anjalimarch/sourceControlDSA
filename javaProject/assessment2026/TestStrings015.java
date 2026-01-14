@@ -29,6 +29,13 @@ public class TestStrings015 {
         System.out.println(name.startsWith("Anj"));
         System.out.println(name.endsWith("ra"));
         System.out.println(name.toLowerCase());
+        System.out.println(name.toUpperCase());
+        String s1= "abc";
+        String s2= "def";
+        String s3 = s1.concat(s2);
+
+        System.out.println(s1);
+        System.out.println(s3);
 
 
 
