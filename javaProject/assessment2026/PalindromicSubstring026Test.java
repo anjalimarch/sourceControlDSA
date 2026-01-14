@@ -43,6 +43,6 @@ public class PalindromicSubstring026Test {
 
 
         }
-        System.out.println("the number of palindromic substrings "+ count);
+        System.out.println("\nthe number of palindromic substrings "+ count);
     }
 }
