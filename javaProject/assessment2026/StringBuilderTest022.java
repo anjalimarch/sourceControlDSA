@@ -13,9 +13,13 @@ public class StringBuilderTest022 {
          sb.setCharAt(0,'m');
          System.out.println(sb);
          sb.insert(0, 'y');
-        System.out.println(sb);
+         System.out.println(sb);
          sb.deleteCharAt(2);
-        System.out.println(sb);
+         System.out.println(sb);
+
+         sb.delete(2,4);
+        // sb.reverse();
+         System.out.println(sb);
 
     }
 
