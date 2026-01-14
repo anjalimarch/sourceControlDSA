@@ -13,6 +13,9 @@ public class TestStringInterning020 {
         System.out.println(s);
         System.out.println(x);
 
+        s=s.substring(0,2)+'y'+s.substring(3);//he +y+lo
+        System.out.println(s);
+
 
     }
 
