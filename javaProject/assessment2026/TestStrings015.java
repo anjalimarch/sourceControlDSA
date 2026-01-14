@@ -27,6 +27,7 @@ public class TestStrings015 {
         String name= "Anjali Mishra";
         System.out.println(name.contains("Mis"));
         System.out.println(name.startsWith("Anj"));
+        System.out.println(name.endsWith("ra"));
 
 
 
