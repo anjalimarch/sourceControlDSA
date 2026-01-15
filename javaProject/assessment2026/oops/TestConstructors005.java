@@ -16,6 +16,21 @@ class  MyMainEmployee{
 
 
     }
+
+    public  MyMainEmployee(String name){
+
+
+        this.name = name;
+
+
+    }
+    public  MyMainEmployee(String name, int id){
+        this.id= id;
+
+        this.name = name;
+
+
+    }
     void setId(int i ){
         id = i;
 
@@ -49,10 +64,17 @@ public class TestConstructors005 {
 
     public static void main(String[] args) {
 
-        MyMainEmployee harry = new MyMainEmployee();
+        MyMainEmployee potter = new MyMainEmployee();
 
-       System.out.println(harry.getId());
-       System.out.println(harry.getName());
+        MyMainEmployee harry = new MyMainEmployee("Mishra");
+        MyMainEmployee anjali = new MyMainEmployee("pochuBeta", 30);
+
+         System.out.println(harry.getId());
+         System.out.println(harry.getName());
+        System.out.println(anjali.getId());
+        System.out.println(anjali.getName());
+        System.out.println(potter.getId());
+        System.out.println(potter.getName());
 
 
 
