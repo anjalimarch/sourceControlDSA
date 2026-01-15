@@ -68,6 +68,27 @@ class Square{
 }
 
 
+class Tommy {
+
+    public void hit(){
+        System.out.println("hitting the enemy");
+
+    }
+   public void run(){
+
+        System.out.println("Running from enemy");
+   }
+   public void fire(){
+
+        System.out.println("Firing the enemy ");
+
+
+   }
+
+
+}
+
+
 
 public class TestClassEmp002 {
 
@@ -98,6 +119,28 @@ public class TestClassEmp002 {
         iphone.vibrating();
 
         Square sq = new Square();
+
+        //problem 3
+        sq.side=3;
+
+        int a = sq.area();
+        int p = sq.perimeter();
+
+        System.out.println(a);
+        System.out.println(p);
+
+        //problem 4
+        Tommy t = new Tommy();
+        t.fire();
+        t.hit();
+        t.run();
+
+
+
+
+
+
+
     }
 
 
