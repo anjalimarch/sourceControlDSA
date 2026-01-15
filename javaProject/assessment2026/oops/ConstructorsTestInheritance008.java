@@ -13,7 +13,7 @@ class Base1 {
 
     Base1(int a){
 
-        System.out.println("I am a constuctor with value of a as :"+a);
+        System.out.println("I am a Base class constuctor with value of a as :"+a);
 
 
     }
@@ -42,8 +42,8 @@ class Derived1 extends Base1{
     Derived1(int c, int d){
         super(111);
 
-        System.out.println("I am a constuctor with value of c as :"+c);
-        System.out.println("I am a constuctor with value of d as :"+d);
+        System.out.println("I am a Derived class constuctor with value of c as :"+c);
+        System.out.println("I am a Derived class constuctor with value of d as :"+d);
 
     }
     public int y;
@@ -55,6 +55,23 @@ class Derived1 extends Base1{
     public void setY(int y) {
         this.y = y;
     }
+}
+
+class ChildOfDerived extends Derived1{
+
+    ChildOfDerived(){
+
+        System.out.println("I am a child of derived constructor");
+    }
+
+    ChildOfDerived(int x, int y , int z){
+        super(x,y);
+
+        System.out.println("I am a child of derived constructor"+x);
+        System.out.println("I am a child of derived constructor"+y);
+        System.out.println("I am a child of derived constructor"+z);
+    }
+
 }
 
 
@@ -76,6 +93,7 @@ public class ConstructorsTestInheritance008 {
         Derived1 e = new Derived1(89,91);
       //  System.out.println(d.getX());
        // d.getX();
+        ChildOfDerived f = new ChildOfDerived(114,113,115);
 
     }
 }
