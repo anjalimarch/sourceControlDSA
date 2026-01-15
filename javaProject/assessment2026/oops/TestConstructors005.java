@@ -3,13 +3,19 @@ package assessment2026.oops;
 
 
 
-class  MyEmployee{
+class  MyMainEmployee{
 
     private int id;
     private String name;
 
 
+    public  MyMainEmployee(){
 
+        id =45;
+        name = "Your- Name - Here";
+
+
+    }
     void setId(int i ){
         id = i;
 
@@ -38,25 +44,19 @@ class  MyEmployee{
 
 
 
-public class TestClassModifiers004 {
+public class TestConstructors005 {
 
 
     public static void main(String[] args) {
 
-            MyEmployee harry = new MyEmployee();
+        MyMainEmployee harry = new MyMainEmployee();
 
-             harry.setId(3);
-             harry.setName("Anjali");
+       System.out.println(harry.getId());
+       System.out.println(harry.getName());
 
 
 
-           int id = harry.getId();
-           String name= harry.getName();
-           System.out.println(id+"--"+name);
 
 
     }
-
-
-
 }
