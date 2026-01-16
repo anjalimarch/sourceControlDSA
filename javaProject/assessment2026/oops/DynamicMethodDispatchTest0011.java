@@ -46,7 +46,7 @@ public class DynamicMethodDispatchTest0011 {
 
     obj.greet();
     obj.name();// sub class method will be called
-        
+
    // SmartPhone obj2= new Phone(); //wrong
 
 
