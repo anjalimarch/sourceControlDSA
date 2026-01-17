@@ -15,7 +15,15 @@ interface Bicycle{
 
 }
 
-class AronCycle implements Bicycle{
+interface HornBicycle{
+
+
+    void blowHornK3g();
+    void blogHornmhn();
+
+}
+
+class AronCycle implements Bicycle, HornBicycle{
 
     int speed =7;
 
@@ -38,6 +46,15 @@ class AronCycle implements Bicycle{
        speed=speed+increment;
         System.out.println("increase: speed up :"+speed);
     }
+
+    public void blowHornK3g(){
+       System.out.println("Kabhi khushi kabhi gum");
+
+    }
+   public void blogHornmhn(){
+
+    System.out.println("Main hun na");
+    }
 }
 
 
@@ -49,6 +66,8 @@ public class TestInterfaces0013 {
         AronCycle cycleone= new AronCycle();
         cycleone.applyBrake(5);
         System.out.println(cycleone.a);
+        cycleone.blogHornmhn();
+        cycleone.blowHornK3g();
 
 
     }
