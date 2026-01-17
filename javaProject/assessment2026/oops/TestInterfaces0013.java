@@ -16,7 +16,7 @@ interface Bicycle{
 }
 
 interface HornBicycle{
-
+   // int a =45; //this is incorrect create properties in interface, but cant modify these as it is final
 
     void blowHornK3g();
     void blogHornmhn();
@@ -26,7 +26,8 @@ interface HornBicycle{
 class AronCycle implements Bicycle, HornBicycle{
 
     int speed =7;
-
+ // can be overriden
+    int a =88;
     void blowHorn(){
 
         System.out.println("Blow horn");
