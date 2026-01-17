@@ -56,8 +56,14 @@ abstract class Child3 extends Parent2{
 public class TestAbstractClass0012 {
 
     public static void main(String[] args) {
-
-
+        Parent2 a = new Child2();
+       a.greet();
+       a.greet2();
+       a.sayHello();
+        Child2 c = new Child2();
+        c.greet();
+        c.greet2();
+        c.sayHello();
 
 
     }
