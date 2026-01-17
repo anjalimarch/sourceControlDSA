@@ -50,5 +50,6 @@ public class TestInterfaces0013 {
         cycleone.applyBrake(5);
         System.out.println(cycleone.a);
 
+
     }
 }
