@@ -1,5 +1,7 @@
 package assessment2026.oops;
 
+//multiple interfaces can be utilised to produce one class which is called multiple inheritance.
+//however, cant be achieved same with classes
 
 
 interface Bicycle{
