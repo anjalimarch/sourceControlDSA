@@ -6,7 +6,14 @@ package assessment2026.oops;
 interface Camera {
     void takeSnap();
     void recordVideo();
+
+    private void greet(){
+
+       System.out.println("private method");
+        //cant be used in class but can be accessed via another method.
+    }
     default void record4KVideo(){
+        greet();
 
         System.out.println("Recording in 4K:");
     };
@@ -68,10 +75,14 @@ class MySmartPhone extends MyCellPhone implements Wifi, Camera{
         System.out.println("connecting to network:"+network);
     }
 
-    public void record4KVideo(){
+   /* public void record4KVideo(){
 
         System.out.println("recording 4k video: in smarthphone class ");
-    }
+    }*/
+
+
+
+
 }
 
 
@@ -80,15 +91,17 @@ public class TestInterface0014 {
     public static void main(String[] args) {
 
         MySmartPhone ms = new MySmartPhone();
-      String[] nteworks=   ms.getNetworks();
+        String[] nteworks=   ms.getNetworks();
 
-      for(String n: nteworks){
+          for(String n: nteworks){
 
-          System.out.println(n);
+             System.out.println(n);
 
-      }
+          }
 
-       ms.record4KVideo();
+
+
+         ms.record4KVideo();
 
     }
 
