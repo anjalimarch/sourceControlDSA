@@ -33,5 +33,13 @@ public class ValidStringProblem {
 
 
 
+
+    /*Part	Pattern	Description
+    Start & End	^ ... $	Ensures the entire string matches from beginning to end.
+    The Word	([a-z]+(-?[a-z]+)?)?	Matches a word consisting of lowercase letters.
+- Letters	[a-z]+	Matches one or more lowercase letters.
+            - Optional Hyphen	(-?[a-z]+)?	Optionally matches a single hyphen followed by more letters.
+            Punctuation	(!|\.|,)?	Optionally matches exactly one punctuation mark: !, ., or ,.*/
+
 }
 
