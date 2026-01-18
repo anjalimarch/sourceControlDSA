@@ -14,37 +14,32 @@ public class RemoveDuplicatesArray {
         int [] a = {3,4,5,5,5,6,7};
 
 
-        printArray(a);
+        //printArray(a);
 
 
         removeDuplicates(a);
-     //   printArray(a);
+      printArray(a);
     }
 
 
 
 
 public static void removeDuplicates(int []a){
+        int rd =0;
 
-        int j= 0;
+        for (int i=1; i<a.length;i++)
+        {
 
-        for(int i=1;i<a.length;i++){
-
-            if(a[j]!=a[i]){
-
-             j++;
-
+            if(a[rd]!=a[i]){
+                rd++;
+                a[rd]=a[i];
 
 
             }
-            a[j]=a[i];
+
+
         }
-    for(int i=0;i<=j;i++){
 
-        System.out.println(a[i]);
-
-
-    }
 
 }
 

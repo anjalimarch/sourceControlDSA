@@ -2,6 +2,8 @@ package interviewQuestions;
 
 public class checkTwoStrings {
 
+
+    //Check if two strings are equivalent after removing consecutive duplicates."
     static String getString(char x)
     {
 

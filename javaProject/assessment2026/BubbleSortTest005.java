@@ -19,7 +19,7 @@ public class BubbleSortTest005 {
             // i=0, for 1st pass n-1 comparision,
             // i=1. for second pass n-2 comparision
             // i=2, for third pass n-3 comparision,
-            // // n-i-1 in every pass elements will  be removed from behind to compare. For comparision in each pass. 
+            // // n-i-1 in every pass elements will  be removed from behind to compare. For comparision in each pass.
         {
 
 
