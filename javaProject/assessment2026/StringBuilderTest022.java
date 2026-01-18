@@ -22,9 +22,14 @@ public class StringBuilderTest022 {
          System.out.println(sb);
          sb.reverse();
          System.out.println(sb);
+
+
          String newString= sb.substring(3);
          System.out.println(newString);
          System.out.println(sb);
+
+         String newString1=newString.substring(1,3);
+         System.out.println(newString1);
 
 
     }

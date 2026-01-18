@@ -12,6 +12,10 @@ abstract class Parent2{
 
         System.out.println("Hello");
     }
+    public void onlyInParent(){
+
+        System.out.println("only in parent");
+    }
     abstract public void greet();
     abstract public void greet2();
 
@@ -31,6 +35,13 @@ class Child2 extends Parent2{
       System.out.println("Good afternoon");
 
   }
+
+
+    public void onlyInChild(){
+
+        System.out.println("only in child ");
+
+    }
 
 }
 
@@ -60,10 +71,14 @@ public class TestAbstractClass0012 {
        a.greet();
        a.greet2();
        a.sayHello();
+       a.onlyInParent();
+       //a.onlyInChild // ref hi class k method decide karega ya to unique ya fir overriden  wrong
         Child2 c = new Child2();
         c.greet();
         c.greet2();
         c.sayHello();
+        c.onlyInParent();
+        c.onlyInChild();
 
 
     }
