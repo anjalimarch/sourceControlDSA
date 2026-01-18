@@ -18,7 +18,7 @@ public class RemoveDuplicatesArray {
 
 
         removeDuplicates(a);
-      printArray(a);
+     // printArray(a);
     }
 
 
@@ -39,6 +39,13 @@ public static void removeDuplicates(int []a){
 
 
         }
+
+    for(int i=0;i<=rd;i++){
+
+        System.out.println(a[i]);
+
+
+    }
 
 
 }
