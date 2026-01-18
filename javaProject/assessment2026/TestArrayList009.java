@@ -24,7 +24,7 @@ public class TestArrayList009 {
 
         System.out.println(list);
         list.set(1,43);
-        list.remove(2);
+       // list.remove(2);
         System.out.println(list);
       //  list.size();
         System.out.println(list.size());
@@ -33,11 +33,13 @@ public class TestArrayList009 {
         for(int i= 0; i<list.size(); i++){
 
 
-           // System.out.println(list.get(i));
-
-            Collections.sort(list);
             System.out.println(list.get(i));
+
+
+            //System.out.println(list.get(i));
         }
+        Collections.sort(list);
+        System.out.println(list);
     }
 
 

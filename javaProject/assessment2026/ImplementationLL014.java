@@ -151,7 +151,7 @@ public class ImplementationLL014 {
 
            }
         temp.next = temp.next.next;
-           tail= temp;
+           tail= temp; //if we delete last index.
         size--;
       }
 

@@ -14,14 +14,14 @@ public class TestStrings015 {
         // System.out.println(str);
       //   System.out.println(strNew);
 
-        String str = "Mishra Anjali";
+      String str = "Mishra Anjali";
         int len = str.length();
         System.out.println(len);
         char ch = str.charAt(3);
         System.out.println(ch);
         int idx = str.indexOf('i');
         System.out.println(idx);
-        String atr = "Hello";
+       String atr = "Hello";
         String gtr= "Dello";
         System.out.println(atr.compareTo(gtr));
         String name= "Anjali Mishra";
