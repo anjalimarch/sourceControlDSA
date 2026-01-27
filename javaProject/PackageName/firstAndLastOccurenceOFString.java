@@ -5,6 +5,9 @@ public class firstAndLastOccurenceOFString {
     //first and last occurence of an element in string
     //  abaacdaefaah
 
+//    /*Write a recursive function to compare characters of a string from both ends
+//    (moving inward) to identify matching character pairs at corresponding positions from the start and the end.*/
+
     public static void main(String args []){
 
         String s= "njalimishra";
@@ -23,7 +26,7 @@ public static void occurenceCheck(String s, int i, int j,int count){
     if(s.charAt(i)==s.charAt(j)) {
         System.out.println("first char " + s.charAt(i) + " " + "last char " + s.charAt(j));
         count=count+1;
-        System.out.println(count);
+        System.out.println(count+"--"+"POSITION I--"+i+"POSITION J--"+j);
     }
 
 

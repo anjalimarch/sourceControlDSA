@@ -22,6 +22,7 @@ public  static  void main (String args [])
 
 
 
+
 }
 
 public  static  void fibNaci(int a , int b,int  n){
