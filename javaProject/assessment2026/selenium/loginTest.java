@@ -174,6 +174,7 @@ public class loginTest {
 
     }
 
+    //Count enabled buttons
     public static int countEnabledButtons(boolean [] buttons ){
 
         int count = 0 ;
@@ -252,6 +253,8 @@ public class loginTest {
 
        boolean checkLen=  passwordStrength(lenPass);
        System.out.println("checkLen--"+checkLen);
+
+       //Count enabled buttons
 
        boolean [] enabledButtons = {true, false, true, true};
 
