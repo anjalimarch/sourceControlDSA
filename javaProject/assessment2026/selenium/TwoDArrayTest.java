@@ -1,5 +1,8 @@
 package assessment2026.selenium;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class TwoDArrayTest {
 
 
@@ -154,7 +157,46 @@ public class TwoDArrayTest {
 
 
     }
+    // 1 D array
+    static boolean isflaky(int [] a ){
+        for(int i=0; i<a.length-2; i++){
 
+            if(a[i]==1&&a[i+1]==0&& a[i+2]==1){
+
+
+                 return true;
+
+
+
+
+            }
+
+
+        }
+
+        return false ;
+
+    }
+
+    static List<Integer> FlakyTests(int [][] m){
+
+
+        List<Integer> list = new ArrayList<>();
+        for(int i=0; i<m.length;i++){
+
+            if(isflaky(m[i])){
+
+                list.add(i);
+
+            }
+
+
+        }
+
+
+        return list;
+
+    }
 
 
 
@@ -187,6 +229,18 @@ public class TwoDArrayTest {
 
         };
 
+        int [] [] reportFlaky  = {
+
+
+                {1,0,1},
+                {1,1,0},
+                {1,0,1},
+                {1,0,1},
+
+
+
+        };
+
 
         System.out.println (report.length);// rows
         System.out.println(report[0].length);//cols
@@ -204,6 +258,9 @@ public class TwoDArrayTest {
         System.out.println("browser level  -- "+countbrowser);
 
 
+     List  res=    FlakyTests(reportFlaky);
+
+        System.out.println("flaky in 2d   -- "+res);
 
 
 
