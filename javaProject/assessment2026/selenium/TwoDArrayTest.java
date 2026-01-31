@@ -57,7 +57,7 @@ public class TwoDArrayTest {
 
             for(int j=0; j<m[i].length; j++){
 
-
+                System.out.println(  "  m["+i+"]["+j+"]--"+m[i][j]);
 
                 if(m[i][j]==0){
 
@@ -212,7 +212,7 @@ public class TwoDArrayTest {
         int [] [] report = {
 
 
-                {1,0,0},
+                {1,0,1},
                 {1,1,0},
                 {1,0,0},
 

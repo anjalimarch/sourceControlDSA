@@ -359,7 +359,7 @@ public class loginTest {
 
         //lock account after two consecutive failures
 
-        String [] failRes= {"Fail","Fail", "//Fail","True", "True"};
+        String [] failRes= {"Fail","Fail", "Fail","True", "True"};
 
          boolean res =   isLocked(failRes);
 
