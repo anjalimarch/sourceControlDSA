@@ -244,6 +244,30 @@ public class loginTest {
     }
 
 
+    static int retryNeeded(String [] in){
+
+        int retry =0;
+
+        for(int i = 1; i<in.length; i++){
+
+            if(in [i].equals("Fail")&& in[i-1].equals("Fail")){
+
+
+                retry ++;
+
+            }
+
+
+
+
+        }
+
+
+
+        return retry ;
+    }
+
+
 
     public static void main (String args [] ){
 
@@ -320,6 +344,22 @@ public class loginTest {
         int [] t = {5,12,20,7};
 
         allowedTimeout(t, 10);
+
+        // if after two consecuting failure retry needed how many retries should be here
+        String [] input  = {"Fail", "Fail","Pass"}; // needed retry 1
+        String [] inputUpadted   = {"Fail", "Fail","Pass","Fail", "Fail"};// needed retry 2
+        String [] inputOne = {"Fail", "Fail","Fail"};//2
+
+
+       int outcome =  retryNeeded(input);
+
+       System.out.println("retry needed :"+outcome);
+        int outcome1 =  retryNeeded(inputUpadted);
+
+        System.out.println("retry needed :"+outcome1);
+        int outcome2 =  retryNeeded(inputOne);
+
+        System.out.println("retry needed :"+outcome2);
     }
 
 
