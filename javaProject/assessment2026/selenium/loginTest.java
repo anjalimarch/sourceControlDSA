@@ -243,7 +243,7 @@ public class loginTest {
         return count;
     }
 
-
+    // if after two consecuting failure retry needed how many retries should be here
     static int retryNeeded(String [] in){
 
         int retry =0;
@@ -267,6 +267,73 @@ public class loginTest {
         return retry ;
     }
 
+
+
+    static int longestStableRun(String [] run ){
+
+
+        int curr =0;
+        int max = 0;
+
+        for (String a : run ){
+
+            if(a.equals("PASS")){
+
+                curr++;
+
+              /*if(curr>max ) {
+
+
+                  max = curr;
+              }*/
+
+                max = Math.max(max, curr);
+
+
+            }else{
+
+                curr =0 ; // resetting on a failure is very important
+
+            }
+
+
+
+
+
+        }
+
+        return max;
+
+
+
+
+
+
+    }
+
+
+
+    static boolean flakyTestDetected(String [] run){
+
+        for (int i=0; i<run.length-2; i++){
+
+            if(run[i].equals("Pass")&&run[i+1].equals("Fail")&& run[i+2].equals("Pass")){
+
+                return true;
+
+
+
+
+            }
+
+
+
+
+        }
+
+
+        return false;
+    }
 
 
     public static void main (String args [] ){
@@ -360,7 +427,28 @@ public class loginTest {
         int outcome2 =  retryNeeded(inputOne);
 
         System.out.println("retry needed :"+outcome2);
+
+
+        //give the count of longest stable run :
+
+        String [] run = {"PASS","PASS","FAIL","PASS","PASS","PASS"};
+
+       int count =  longestStableRun(run);
+
+       System.out.println("longestStableRun--"+count );
+
+       //flaky tests in selenium
+
+        String [] flaky = {"Pass", "Fail", "Pass"};
+        boolean resultFlaky = flakyTestDetected(flaky);
+        System.out.println("resultFlaky--"+resultFlaky );
+
+
+        String [] flaky1 = {"Fail","Pass", "Fail", "Pass","Fail"};
+        boolean resultFlaky1 = flakyTestDetected(flaky1);
+        System.out.println("resultFlaky1--"+resultFlaky1 );
+    }
     }
 
 
-}
+
