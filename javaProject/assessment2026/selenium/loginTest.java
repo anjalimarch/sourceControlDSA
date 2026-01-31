@@ -123,11 +123,39 @@ public class loginTest {
 
     }*/
 
-
+    //Email format validation
     static boolean validateFormat(String email){
 
         return email.contains("@") && email.contains(".");
-        
+
+
+    }
+
+
+    //mandatory fields are filled
+    static boolean allFields(String [] fields ){
+
+        for(String s : fields ){
+
+            if(s.isEmpty()){
+
+                return false;
+
+
+
+            }else {
+
+
+                return true;
+            }
+
+
+        }
+
+
+
+        return true;
+
 
     }
 
@@ -176,6 +204,12 @@ public class loginTest {
        boolean format =  validateFormat(email);
 
        System.out.println("format"+format );
+
+       //mandatory fields are filled
+        String [] fields = {"name","email","password",""};
+        boolean resISEmpty =  allFields(fields);
+
+        System.out.println("isEmpty"+resISEmpty);
 
 
 
