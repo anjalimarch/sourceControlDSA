@@ -174,6 +174,26 @@ public class loginTest {
 
     }
 
+    public static int countEnabledButtons(boolean [] buttons ){
+
+        int count = 0 ;
+        for(boolean b : buttons ){
+
+            if(b){
+
+                count ++;
+
+
+            }
+
+
+        }
+        return count;
+
+
+
+    }
+
 
 
     public static void main (String args [] ){
@@ -232,6 +252,12 @@ public class loginTest {
 
        boolean checkLen=  passwordStrength(lenPass);
        System.out.println("checkLen--"+checkLen);
+
+       boolean [] enabledButtons = {true, false, true, true};
+
+       int buttons = countEnabledButtons(enabledButtons);
+       System.out.println("buttons -- "+buttons);
+
 
 
 
