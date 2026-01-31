@@ -160,6 +160,21 @@ public class loginTest {
     }
 
 
+    static boolean  passwordStrength(String pass){
+
+        if(pass.length()>=8) {
+            return true;
+        }
+
+
+
+            return false;
+
+
+
+    }
+
+
 
     public static void main (String args [] ){
 
@@ -211,7 +226,12 @@ public class loginTest {
 
         System.out.println("isEmpty"+resISEmpty);
 
+       // password Strength
 
+        String lenPass = "Test@123";
+
+       boolean checkLen=  passwordStrength(lenPass);
+       System.out.println("checkLen--"+checkLen);
 
 
 
