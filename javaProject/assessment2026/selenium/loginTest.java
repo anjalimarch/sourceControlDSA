@@ -196,6 +196,54 @@ public class loginTest {
     }
 
 
+    static int  detectDisabledButton(boolean [] bool ){
+        int count =0;
+
+        for(boolean val : bool){
+
+            if(!val){
+
+                count ++;
+                return count ;
+            }
+
+
+
+
+        }
+
+        return 1;
+
+
+
+    }
+
+
+    // maximum allowed time for selenium
+    static int allowedTimeout(int [] t, int max ){
+        int count =0;
+        for(int time: t){
+
+            if(time>max){
+
+
+                count ++;
+
+
+
+            }
+
+
+
+
+        }
+
+
+
+        return count;
+    }
+
+
 
     public static void main (String args [] ){
 
@@ -261,10 +309,17 @@ public class loginTest {
        int buttons = countEnabledButtons(enabledButtons);
        System.out.println("buttons -- "+buttons);
 
+      //Detect disabled submit button
 
+        boolean [] bool = {true, true,false};
+       int  detect =  detectDisabledButton(bool);
+       System.out.println("detect -- "+detect);
 
+  // maximum allowed time for selenium
 
+        int [] t = {5,12,20,7};
 
+        allowedTimeout(t, 10);
     }
 
 
