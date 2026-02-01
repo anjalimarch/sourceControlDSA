@@ -1,9 +1,6 @@
 package assessment2026.selenium.java;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 //Q16: Capitalize first letter of each word
 
@@ -247,6 +244,175 @@ public class JavaStringQuestions {
 
     }
 
+    static boolean isAnagramCheck(String s1, String s2){
+        if(s1.length()!=s2.length()){
+
+            return false;
+
+        }
+
+
+      String in =  s1.toLowerCase();
+       String out = s2.toLowerCase();
+
+       int [] x = new int[26];
+
+
+       for (int i=0; i<in.length(); i++){
+
+
+           x[in.charAt(i)-'a']++;
+           x[out.charAt(i)-'a']--;
+
+
+       }
+
+
+       for(int y: x){
+
+           if(y!=0){
+
+               return false;
+
+           }
+
+
+       }
+
+        return true;
+
+    }
+
+
+    static int findNonRepeating(int [] in) {
+
+        HashMap<Integer, Integer> m = new LinkedHashMap<>();
+
+        for (int i : in) {
+
+            if (!m.containsKey(i)) {
+
+                m.put(i, 1);
+
+
+            } else {
+
+                m.put(i, m.get(i) + 1);
+
+
+            }
+
+
+        }
+
+
+        for(Map.Entry<Integer, Integer> e: m.entrySet()){
+
+            if(e.getValue()==1){
+
+
+                return e.getKey();
+
+            }
+
+
+
+        }
+
+        return  -1;
+    }
+
+
+    static  String  reverseEachWordInASentence(String words){
+
+      String [] c =   words .split(" ");
+      String ans = " ";
+
+
+      for (String s : c ){
+
+            StringBuilder news = new StringBuilder(s);
+            String rev = news.reverse().toString();
+            ans = ans +rev+" ";
+
+      }
+
+      return ans;
+
+    }
+
+   // String str = "I am an online educator";
+    static  String  reverseEachWordInUsingAppend (String words){
+
+           String ans="";
+            StringBuilder sb = new StringBuilder("");
+            for(int i =0; i<words.length();i++){
+
+                char ch = words.charAt(i);
+
+                if(ch!=' '){
+
+                    sb.append(ch);
+                }else{
+                      sb.reverse();
+                      ans+=sb;
+                      ans+=" ";
+
+                    sb = new StringBuilder("");
+
+
+                }
+
+
+
+              }
+
+        sb.reverse();
+        ans+=sb;
+        return ans;
+
+        }
+
+
+    static boolean checkBalanceParanthesis(String s ){
+
+
+        Stack<Character> st= new Stack();
+
+        for(char ch:s.toCharArray()){
+
+            if(ch=='('|| ch=='{'||ch=='['){
+
+                st.push(ch);
+            }
+            else{
+
+                if (st.isEmpty()) // what if never pushed the left ones
+                    return false;
+
+                char top = st.pop();
+
+                if (ch == ')' && top != '(') return false;
+                if (ch == '}' && top != '{') return false;
+                if (ch == ']' && top != '[') return false;
+
+
+
+
+            }
+
+
+
+
+
+        }
+
+        return st.empty();
+
+
+    }
+
+
 
     public static void main (String args [] ){
 
@@ -256,6 +422,9 @@ public class JavaStringQuestions {
 
         String input = "level";
         String name = "rudransh";
+        String str = "I am an online educator";
+        String bal = "{[()]}";
+        String balVal= ")]}";
         chekPalindrom(input);
         checkPalinwithoutpoin(input);
 
@@ -267,7 +436,7 @@ public class JavaStringQuestions {
 
        String ss= "test automation test";
 
-      Map<String, Integer>m1= countSubStringoccur(ss);
+       Map<String, Integer>m1= countSubStringoccur(ss);
         System.out.println(    m1);
 
        // System.out.println(    revString(s));
@@ -286,6 +455,36 @@ public class JavaStringQuestions {
         System.out.println(    checkOnlyDigit(onlyDigit));
         //longest word in a sentence
         System.out.println(    findLongest(a));
+
+    // increase the count w.r.t characters
+        String s1="Silent";
+        String s2= "Listen";
+       // isAnagramCheck(s1,s2);
+
+        System.out.println(    isAnagramCheck(s1,s2));
+        //find first non repeating
+        int [] nonIn = {78,45,78,32,34,32,45,64};
+
+
+
+
+        System.out.println(    findNonRepeating(nonIn));
+        System.out.println(    reverseEachWordInASentence(words));
+
+        System.out.println(     reverseEachWordInUsingAppend(str));
+        checkBalanceParanthesis(bal);
+        checkBalanceParanthesis(balVal);
+
+
+        //extract tions
+
+
+        String f = "Test123Result45";
+        System.out.println(f.replaceAll("\\D", ""));
+        String g = "TestCase123";
+        System.out.println(g.matches("[a-zA-Z0-9]+"));
+
+
 
 
 

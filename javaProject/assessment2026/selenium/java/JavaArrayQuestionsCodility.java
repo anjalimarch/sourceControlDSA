@@ -246,6 +246,238 @@ static int sum(int [] a){
 
 
 
+   static int [] mergeTwoSortedArrays(int [] a, int [] b){
+
+    int [] m = new int [a.length+b.length];
+
+    int i =0 ;
+    int j=0;
+    int k =0;
+
+     while (i<a.length &&j<b.length){
+
+           if(a[i]<b[j]){
+
+               m[k]= a[i];
+               i++;
+               k++;
+
+           }else {
+
+               m[k]= b[j];
+               j++;
+               k++;
+
+
+
+           }
+
+
+     }
+
+       while (i<a.length){
+           m[k]=a[i];
+           i++;
+           k++;
+
+
+       }
+
+       while (j<b.length){
+           m[k]=b[j];
+           j++;
+           k++;
+
+
+       }
+
+     return m;
+
+   }
+
+
+   static int sumOfDigit(int n){
+    int r;
+       int s=0;
+     while(n>0) {
+         r = n % 10;
+         s += r;
+         n = n / 10;
+
+     }
+
+    return s;
+
+   }
+
+
+   static int revInt(int n){
+
+       int r;
+       int s=0;
+       while(n>0) {
+           r = n % 10;
+           s=s*10+r;
+           n = n / 10;
+
+       }
+
+       return s;
+
+
+
+
+   }
+
+
+   static boolean isPrimeNumber(int n ){
+
+      for(int i =2; i<=Math.sqrt(n);i++){
+
+          if (n%i==0){
+
+              return false;
+
+          }
+          else{
+
+
+              return true;
+          }
+
+      }
+
+
+    return false;
+
+   }
+
+   static  int secondLargestInAnArray(int [] a){
+
+       int max= a[0];
+       int Smax= a[1];
+
+
+       if(a[1]>a[0]){
+
+
+           Smax= a[0];
+           max= a[1];
+
+
+
+
+       } else{
+
+           max= a[0];
+           Smax= a[1];
+
+
+       }
+
+
+       for(int i =2; i<a.length; i++){
+
+
+           if(a[i]>max){
+               Smax= max;
+               max = a[i];
+
+
+
+
+           }
+           else  if(a[i]>Smax){
+               Smax=a[i];
+
+
+
+           }
+
+
+       }
+
+       return Smax;
+
+
+   }
+
+
+
+   static Set<Integer> intersection (int [] a, int [] b ){
+
+      Set one = new HashSet<Integer>();
+      Set two = new HashSet<Integer>();
+
+
+      for(int k : a){
+
+          one.add(k);
+
+
+
+
+      }
+
+      for(int j :b){
+
+          if(one.contains(j)){
+
+              two.add(j);
+
+
+
+
+
+          }
+
+      }
+
+
+
+    return two;
+
+   }
+
+
+   static int countDistinct(int [] n ){
+
+    Set <Integer> x = new HashSet<>();
+
+
+    for(int k : n ){
+
+        x.add(k);
+
+    }
+
+    return x.size();
+
+
+
+
+
+   }
+
+   static int kadanesAlgo(int [] input ){
+
+    int currSum = input[0];
+    int max = input[0];
+
+    for(int i =1; i<input.length; i++){
+
+
+        currSum= Math.max(input[i], currSum+input[i]);
+        max =Math.max(max, currSum);
+
+
+    }
+
+    return max;
+
+
+   }
+
 
 
 
@@ -309,6 +541,41 @@ public static void main(String args []){
     int [] d =    removeDuplicate(a);
 
      printArray(d);
+
+     int [] one = {1,3,5};
+     int [] two = {2,4,6};
+    int [] three = {2,4,6,5,8,9};
+    int [] interA= {2,4,6,5,8,9};
+    int [] interB= {12,14,16,5,4,6};
+    int [] countDis= {12,14,16,5,14,16,12};
+
+     int [] merged = mergeTwoSortedArrays(one,two);
+     printArray(merged);
+
+
+     int n= 1234;
+     sumOfDigit(n);
+
+    revInt(n);
+    int np = 7;
+
+   System.out.println(isPrimeNumber(np));
+
+    System.out.println(secondLargestInAnArray(three));
+    System.out.println(intersection(interA,interB));
+
+   ;
+
+    System.out.println( countDistinct(countDis));
+    int [] inputArray = {3,-2,5,-1};
+
+      kadanesAlgo(inputArray);
+    //largestSum
+
+  System.out.println(kadanesAlgo(inputArray));
+
+
+
 
 
 
