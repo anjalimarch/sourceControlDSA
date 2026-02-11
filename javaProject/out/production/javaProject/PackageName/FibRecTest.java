@@ -6,33 +6,31 @@ public class FibRecTest {
 
     public  static void main(String args []){
 
-        Scanner s = new Scanner(System.in);
-        int num = s.nextInt();
+       // Scanner s = new Scanner(System.in);
+       // int num = s.nextInt();
+        int num = 7;
 
-        fibRecVal(0, 1, num);
+        fibRecVal(0, 1, num-2);
 
 
     }
 
     public static void  fibRecVal(int a, int b , int n){
-        int c;
-        c= a+b;
-        if(c==n){
 
-            a=b;
-            b=c;
+        if(n==0){
 
-            System.out.println(c);
+
+
           return;
 
         }
+        int c;
+        c= a+b;
 
 
-        a=b;
-        b=c;
         System.out.println(c);
 
-        fibRecVal(a,b, n);
+        fibRecVal(b,c, n-1);
 
 
     }
