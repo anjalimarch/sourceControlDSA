@@ -98,6 +98,26 @@ public class RecursionTest {
 
     }
 
+    static void  reverseString(String s , String newS, int n ){
+
+       if(n==0){
+           newS=   newS+ s.charAt(n);
+
+           System.out.println(newS);
+           return;
+
+       }
+
+
+       ;
+
+        reverseString( s , newS=   newS+ s.charAt(n),  n-1 );
+
+
+
+
+    }
+
 
 
 
@@ -114,6 +134,10 @@ public class RecursionTest {
         System.out.println(updans);
 
         towerOfHanoi(3, "A", "B", "C");
+
+        String s= "abcde";
+
+        reverseString(s,  " ", s.length()-1 );
 
 
 
