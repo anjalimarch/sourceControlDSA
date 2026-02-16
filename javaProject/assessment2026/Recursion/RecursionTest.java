@@ -118,6 +118,43 @@ public class RecursionTest {
 
     }
 
+    public static int   first = -1;
+    public static int    last =-1;
+    public static void occurOfFirstAndLast(String s, char element,  int idx ) {
+
+        if(idx==s.length()){
+
+
+
+            System.out.println(first+" "+last);
+
+            return;
+
+
+        }
+
+     char  currChar= s.charAt(idx);
+
+     if(currChar==element){
+
+
+         if(first==-1){
+
+
+             first= idx;
+         }
+         else  {
+
+             last = idx;
+         }
+
+     }
+
+     occurOfFirstAndLast(s, element,idx+1);
+
+
+    }
+
 
 
 
@@ -139,6 +176,12 @@ public class RecursionTest {
 
         reverseString(s,  " ", s.length()-1 );
 
+        String s1= "abaacdaefaah"; // occur of a/ from last and first
+        occurOfFirstAndLast("rudranshtaa" , 'a', 0);//o(n)
+        //checkIf Array is sorted
+
+
+
 
 
 
@@ -146,4 +189,6 @@ public class RecursionTest {
 
 
     }
+
+
 }
