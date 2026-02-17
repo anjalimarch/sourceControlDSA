@@ -156,6 +156,80 @@ public class RecursionTest {
     }
 
 
+    public static boolean sortedAndStrinctlyInc (int [] a, int idx ){
+
+        if(idx == a.length-1){
+
+
+
+            return true;
+
+
+        }
+
+
+
+        if(a[idx]<a[idx+1]){
+
+            return sortedAndStrinctlyInc(a, idx+1);
+
+
+
+        }else{
+
+            return false;
+
+        }
+
+
+
+
+
+
+    }
+
+
+    public static void  moveAllToEnd(String s, int idx, String newS, int count){
+
+
+        if(idx==s.length()){
+            for(int i =0; i<count; i++){
+
+                 newS= newS+'x';
+
+
+            }
+            System.out.println(newS);
+            return;
+
+        }
+
+
+
+
+
+        char val = s.charAt(idx);
+
+
+        if(val=='x'){
+         count= count+1;
+
+           moveAllToEnd(s, idx+1, newS, count);
+
+
+        } else {
+
+            moveAllToEnd(s, idx+1, newS+val, count);
+
+        }
+
+
+
+
+
+    }
+
+
 
 
     public static void main (String args [] ){
@@ -178,8 +252,18 @@ public class RecursionTest {
 
         String s1= "abaacdaefaah"; // occur of a/ from last and first
         occurOfFirstAndLast("rudranshtaa" , 'a', 0);//o(n)
-        //checkIf Array is sorted
+        //checkIf Array is sorted strictly incereasing
 
+        int [] arr = {1,2,3,4,5,6};
+
+
+
+        boolean res= sortedAndStrinctlyInc(arr, 0);
+        System.out.println(res);
+        //move all x of the string to end
+        String ss= "axnxjxaxlxix";
+
+       moveAllToEnd(ss, 0, " ",0); //o(n+count)
 
 
 
