@@ -231,8 +231,70 @@ public class RecursionTest {
 
 
 
+    public static  boolean [] m  = new boolean[26] ;
+
+
+    public static void removeDuplicatFromString(String s, String newS, int idx  ){
+
+        if(idx==s.length())
+        {
+
+
+            System.out.println(newS);
+
+            return ;
+        }
+
+        char currChar= s.charAt(idx);
+
+     if(!m[currChar-'a'])   {
+
+         m[s.charAt(idx)-'a']=true;
+
+         removeDuplicatFromString(s, newS+s.charAt(idx), idx+1);
+
+
+
+
+     }else{
+
+         removeDuplicatFromString(s, newS, idx+1);
+
+
+     }
+
+
+
+
+
+
+
+
+    }
+
+
+    public static void  printAllSub(String s, String newS, int idx ){
+
+
+        if(s.length()==idx){
+
+            System.out.println(newS);
+            return;
+
+        }
+        char currChar = s.charAt(idx);
+
+        printAllSub(s, newS+currChar, idx+1);
+        printAllSub(s, newS, idx+1);
+
+
+    }
+
+
+
 
     public static void main (String args [] ){
+        RecursionTest r = new RecursionTest();
         int a=0; int b=1;
         System.out.println(a);
         System.out.println(b);
@@ -265,10 +327,12 @@ public class RecursionTest {
 
        moveAllToEnd(ss, 0, " ",0); //o(n+count)
 
+      String s2= "abbccda";
+       removeDuplicatFromString(s2, " ", 0 );
 
+       String s3= "abc";
 
-
-
+      printAllSub(s3, " ", 0);
 
 
 
