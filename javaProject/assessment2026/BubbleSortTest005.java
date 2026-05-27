@@ -13,7 +13,8 @@ public class BubbleSortTest005 {
 
     public static void bubbleSort(int [] a){
           int temp =0;
-        for (int i = 0 ; i<a.length-1; i++){// first element will be remaining in passes- n-1 elements ko laga dia to bacha hua hoga apni jageh per number of passes
+        for (int i = 0 ; i<a.length-1; i++){// first element will be remaining in passes-
+            //// n-1 elements ko laga dia to bacha hua hoga apni jageh per number of passes
 
         for (int j=0 ; j<a.length-1-i; j++)
             // i=0, for 1st pass n-1 comparision,

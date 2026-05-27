@@ -2,6 +2,22 @@ package assessment2026;
 
 public class arraysTest002 {
 
+    //Problem statement :
+   //1: /*  creating a new array : 90
+            /*91
+            92
+            93
+            94
+            95*/
+
+
+     /*//2 Printing an existing array3
+            4
+            7
+            3
+            5
+            6*/
+
     public static  void main(String args []){
         int [] a = new int[6];
         int [] b= {3,4,7,3,5,6};

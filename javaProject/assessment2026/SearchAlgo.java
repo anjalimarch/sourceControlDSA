@@ -1,6 +1,6 @@
 package assessment2026;
 
-public class LinearSearchTest {
+public class SearchAlgo {
 
     public static void main (String args []){
         int [] a= {12,13,33,34,54,67,89};

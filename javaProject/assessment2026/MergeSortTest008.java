@@ -3,7 +3,8 @@ package assessment2026;
 public class MergeSortTest008 {
 
     public static void main (String args [] ){
-        int [] a = {44,11,8,7,45,76,45,54};
+        //int [] a = {44,11,8,7,45,76,45,54};
+        int [] a = {6,4,5,3};
 
         mergeSort(a,  0, a.length-1);
        printArray(a);
@@ -11,8 +12,8 @@ public class MergeSortTest008 {
 
     public static void mergeSort(int [] a, int low, int high){
         if (low>= high ){
-            for (int val:a
-            ) {
+            for (int val:a) {
+
                 //      System.out.println(val);
 
             }
